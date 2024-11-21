@@ -120,8 +120,10 @@ Train the autoencoder first and make changes to config and `video_dataset.py`(if
 ## Output 
 Outputs will be saved according to the configuration present in yaml files.
 
-For every run a folder of ```task_name``` key in config will be created
-During frame extraction , folder name for the key `im_path` will be created in `task_name` directory and frames will be saved in there
+For every run a folder of ```task_name``` key in config will be created.
+
+During frame extraction , folder name for the key `im_path` will be created in `task_name` directory and frames will be saved in there.
+
 During training of autoencoder the following output will be saved 
 * Latest Autoencoder and discriminator checkpoint in ```task_name``` directory
 * Sample reconstructions in ```task_name/vae_autoencoder_samples```
