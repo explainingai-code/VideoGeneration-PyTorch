@@ -1,0 +1,66 @@
+dataset_params:
+  im_path: 'mmnist-easy-images'
+  video_path: 'data/mmnist-easy'
+  video_ext: 'mp4'
+  num_images_train: 8
+  frame_height : 72
+  frame_width : 128
+  frame_channels : 1
+  num_frames: 16
+  frame_interval: 2
+  centre_square_crop: False
+  video_filter_path: null
+  ae_frame_sample_prob : 0.1
+
+diffusion_params:
+  num_timesteps : 1000
+  beta_start : 0.0001
+  beta_end : 0.02
+
+ditv_params:
+  patch_size : 2
+  num_layers : 12
+  hidden_size : 768
+  num_heads : 12
+  head_dim : 64
+  timestep_emb_dim : 256
+
+autoencoder_params:
+  z_channels: 4
+  codebook_size : 20
+  down_channels : [32, 64, 128]
+  mid_channels : [128]
+  down_sample : [True, True]
+  attn_down : [False, False]
+  norm_channels: 32
+  num_heads: 16
+  num_down_layers : 1
+  num_mid_layers : 1
+  num_up_layers : 1
+
+
+train_params:
+  seed : 1111
+  task_name: 'mmnist'
+  autoencoder_batch_size: 64
+  autoencoder_epochs: 20
+  autoencoder_lr: 0.0001
+  autoencoder_acc_steps: 1
+  disc_start: 500
+  disc_weight: 0.5
+  codebook_weight: 1
+  commitment_beta: 0.2
+  perceptual_weight: 1
+  kl_weight: 0.000005
+  autoencoder_img_save_steps: 64
+  save_latents: False
+  ditv_batch_size: 4
+  ditv_epochs: 300
+  num_samples: 1
+  ditv_lr: 0.0001
+  ditv_acc_steps: 1
+  save_video_latent_dir: 'video_latents'
+  vae_latent_dir_name: 'vae_latents'
+  ditv_ckpt_name: 'dit_ckpt.pth'
+  vae_autoencoder_ckpt_name: 'vae_autoencoder_ckpt.pth'
+  vae_discriminator_ckpt_name: 'vae_discriminator_ckpt.pth'
