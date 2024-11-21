@@ -1,17 +1,32 @@
 Video Generation using Diffusion Transformers in PyTorch
 ========
 
-## Building Video Generation Models Tutorial
+## Building Video Generation Model Tutorial
+<a href="https://www.youtube.com/watch?v=KAYYo3lNOHY">
+   <img alt="Video generation with Diffusion Transformers" src="https://github.com/user-attachments/assets/7f987db0-26a1-490b-9ab0-60e26fa17d06"
+   width="400">
+</a>
 
 
 ## Sample Output for Latte on moving mnist easy videos 
 Trained for 300 epochs
-___  
+
+![mnist0-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/a71397ae-5848-439a-94f6-4a73bc35bd4e)
+![mnist1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/5c535116-95b1-46e3-86ef-0cec4b1e56c2)
+![mnist3-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/5c4dfb2b-82b1-4bba-ac03-023ddbcf58ab)
+![mnist4-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/7d549275-b6bd-4af3-8607-f8214831eb18)
 
 ## Sample Output for Latte on UCF101 videos
 Trained for 500 epochs(needs more training)
 
+<img src="https://github.com/user-attachments/assets/f7cc10bc-5c3a-4bb6-881a-f9ff88e40f37" width="100">
+<img src="https://github.com/user-attachments/assets/92d6ac8f-256b-4642-8785-8115e8b71949" width="100">
+<img src="https://github.com/user-attachments/assets/00dffe19-0729-48fe-9a27-3e265313e5f8" width="100">
+<img src="https://github.com/user-attachments/assets/0d243ed1-5c30-4965-854c-7d437f8b347a" width="100">
 
+
+
+___  
 This repository implements Latent Diffusion Transformer for Video Generation Paper. It provides code for the following:
 * Training and inference of VAE on Moving Mnist and UCF101 frames
 * Training and Inference of Latte Video Model using trained VAE on 16 frame video clips of both datasets
