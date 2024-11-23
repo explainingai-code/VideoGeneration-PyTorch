@@ -43,9 +43,9 @@ train_params:
   seed : 1111
   task_name: 'ucf'
   autoencoder_batch_size: 4
-  autoencoder_epochs: 20
+  autoencoder_epochs: 30
   autoencoder_lr: 0.00001
-  autoencoder_acc_steps: 4
+  autoencoder_acc_steps: 1
   disc_start: 5000
   disc_weight: 0.5
   codebook_weight: 1
