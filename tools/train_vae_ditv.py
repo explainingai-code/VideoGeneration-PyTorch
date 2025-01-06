@@ -98,7 +98,6 @@ def train(args):
         step_count = 0
         for ims in tqdm(data_loader):
             step_count += 1
-            optimizer.zero_grad()
             ims = ims.float().to(device)
             B, F, C, H, W = ims.shape
             if not dataset.use_latents:
